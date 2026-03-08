@@ -1,37 +1,29 @@
 # Fantasy Map with Info Markers
 
-This is a map of a region in my fantasy D&D setting. It has markers for cities and 
-important locations. It also contains basic information about those locations.
+This is a map of a region in my fantasy D&D setting. It has markers for cities and important locations. It also contains basic information about those locations.
 
 ## Instructions for Build and Use
 
 Steps to build and/or run the software:
 
-1. First step here
-2.
-3.
+This is a website made using Javascript and Leaflet.
 
 Instructions for using the software:
 
-1. First step here
-2.
-3.
+It is a website. You click on the buttons to find see the information.
 
 ## Development Environment
 
 To recreate the development environment, you need the following software and/or libraries with the specified versions:
 
-* First thing here
-*
-*
+* Download Leaflet
+* Have an IDE that can do Javascript
 
 ## Useful Websites to Learn More
 
 I found these websites useful in developing this software:
 
-* [Website Title](Link)
-*
-*
+* https://leafletjs.com/examples.html
 
 ## Future Work
 
