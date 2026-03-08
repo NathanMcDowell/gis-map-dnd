@@ -27,19 +27,18 @@ The expected minimum amount of time each Sprint for each category is as follows:
 |Date      |Start Time|Category|Description                                 |Total Minutes|
 |----------|----------|:------:|--------------------------------------------|:-----------:|
 | 2/24/26  |  4:30PM  |   IM   |  Environment, basic function, research     |    120      |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
+| 3/03/26  |  5:15PM  |   IM   |  Gathering information                     |    60       |
+| 3/05/26  |  4:30PM  |   IM   |  Adding markers                            |    90       |
+| 3/07/26  |  2:30PM  |   IM   |  Adding markers                            |    90       |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
 
-_Note: Add more rows as needed._
 
 ## Sprint Totals
 
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
-|IM - Individual Module         |                          |
-|TP - Team Project              |                          |
-|MTG - Class Meetings           |                          |
-|**TOTAL**                      |                          |
+|IM - Individual Module         |         6:00             |
+|TP - Team Project              |         2:00             |
+|MTG - Class Meetings           |         4:00             |
+|**TOTAL**                      |         12:00            |
