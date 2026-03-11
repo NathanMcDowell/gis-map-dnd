@@ -10,12 +10,9 @@ map.fitBounds(bounds);
 
 var cityIcon = L.icon({
     iconUrl: 'images/city_marker.png',
-    // shadowUrl: 'leaf-shadow.png',
 
     iconSize:     [20, 20], // size of the icon
-    // shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-    // shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
 var locationIcon = L.icon({
@@ -33,9 +30,8 @@ var townIcon = L.icon({
     popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
 
-// var marker = L.marker([200, 300], {icon: cityIcon}).addTo(map);
-// marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 
+// City Markers
 var allstrenMarker = L.marker([362, 429], {icon: cityIcon}).addTo(map);
 allstrenMarker.bindPopup("<b>Allstren</b><br>The capital city of Primior and seat of the Appointed Triad.").openPopup();
 
@@ -60,24 +56,7 @@ postenMarker.bindPopup("<b>Posten</b><br>Port city built largely on docks that h
 var clastienMarker = L.marker([157, 669], {icon: cityIcon}).addTo(map);
 clastienMarker.bindPopup("<b>Clastien</b><br>Port city and headquarters of the regional Navy.").openPopup();
 
-var deepholdMarker = L.marker([827, 260], {icon: locationIcon}).addTo(map);
-deepholdMarker.bindPopup("<b>Deephold</b><br>Once a great dwarven city and mine, Deephold has been cursed and ruined since the Vampire was defeated.").openPopup();
-
-var sceptersholdMarker = L.marker([508, 746], {icon: locationIcon}).addTo(map);
-sceptersholdMarker.bindPopup("<b>Scepter's Hold</b><br>Anciently a stronghold for a wizard's society, this enchanted tower has been cursed and abandoned since the fall of the Vampire.").openPopup();
-
-var steamwaterMarker = L.marker([467, 162], {icon: locationIcon}).addTo(map);
-steamwaterMarker.bindPopup("<b>The Steamwater Mountains</b><br>These mountains are constantly releasing steam into the air, keeping the west half of Primior warm. Hot springs dot the slopes.").openPopup();
-
-var scatteredstonesMarker = L.marker([929, 647], {icon: locationIcon}).addTo(map);
-scatteredstonesMarker.bindPopup("<b>The Scattered Stones</b><br>These mountains create the northern border of Primior. A few passes lead north to tundra and snowy forests.").openPopup();
-
-var rimeplainMarker = L.marker([518, 1195], {icon: locationIcon}).addTo(map);
-rimeplainMarker.bindPopup("<b>The Rimeplain</b><br>The humidity from the Steamwater Mountains chills over this wilderness, covering it in thick fog and snow. A few small settlements exist in this region.").openPopup();
-
-var freecantonsMarker = L.marker([86, 84], {icon: locationIcon}).addTo(map);
-freecantonsMarker.bindPopup("<b>The Free Cantons</b><br>Beyond the Steamwater Mountains is a heavily forested land called the Free Cantons. It is home to halflings and gnomes driven there by the Vampire.").openPopup();
-
+// Town Markers
 var heathersteadMarker = L.marker([418, 1028], {icon: townIcon}).addTo(map);
 heathersteadMarker.bindPopup("<b>Heatherstead</b><br>The abandoned ancestral home of the halflings. In recent years they have made efforts to restore it to it's greatness.");
 
@@ -99,40 +78,44 @@ vendolnMarker.bindPopup("<b>Vendoln</b><br>Argueably the most remote and least a
 var saltkinMarker = L.marker([155, 818], {icon: townIcon}).addTo(map);
 saltkinMarker.bindPopup("<b>Saltkin</b><br>Saltkin isn't close to major trade routes and survives by catching and shipping fish.");
 
+// Location Markers
+var deepholdMarker = L.marker([827, 260], {icon: locationIcon}).addTo(map);
+deepholdMarker.bindPopup("<b>Deephold</b><br>Once a great dwarven city and mine, Deephold has been cursed and ruined since the Vampire was defeated.").openPopup();
+
+var sceptersholdMarker = L.marker([508, 746], {icon: locationIcon}).addTo(map);
+sceptersholdMarker.bindPopup("<b>Scepter's Hold</b><br>Anciently a stronghold for a wizard's society, this enchanted tower has been cursed and abandoned since the fall of the Vampire.").openPopup();
+
+var steamwaterMarker = L.marker([467, 162], {icon: locationIcon}).addTo(map);
+steamwaterMarker.bindPopup("<b>The Steamwater Mountains</b><br>These mountains are constantly releasing steam into the air, keeping the west half of Primior warm. Hot springs dot the slopes.").openPopup();
+
+var scatteredstonesMarker = L.marker([929, 647], {icon: locationIcon}).addTo(map);
+scatteredstonesMarker.bindPopup("<b>The Scattered Stones</b><br>These mountains create the northern border of Primior. A few passes lead north to tundra and snowy forests.").openPopup();
+
+var rimeplainMarker = L.marker([518, 1195], {icon: locationIcon}).addTo(map);
+rimeplainMarker.bindPopup("<b>The Rimeplain</b><br>The humidity from the Steamwater Mountains chills over this wilderness, covering it in thick fog and snow. A few small settlements exist in this region.").openPopup();
+
+var freecantonsMarker = L.marker([86, 84], {icon: locationIcon}).addTo(map);
+freecantonsMarker.bindPopup("<b>The Free Cantons</b><br>Beyond the Steamwater Mountains is a heavily forested land called the Free Cantons. It is home to halflings and gnomes driven there by the Vampire.").openPopup();
+
+
+//Debug Coord Function
 
 // var popup = L.popup();
-//
-var popup = L.popup();
 
-function onMapClick(e) {
+// function onMapClick(e) {
 
-    var y = e.latlng.lat;  // vertical position
-    var x = e.latlng.lng;  // horizontal position
+//     var y = e.latlng.lat;  // vertical position
+//     var x = e.latlng.lng;  // horizontal position
 
-    popup
-        .setLatLng(e.latlng)
-        .setContent(
-            "Y: " + y.toFixed(2) +
-            "<br>X: " + x.toFixed(2)
-        )
-        .openOn(map);
-}
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent(
+//             "Y: " + y.toFixed(2) +
+//             "<br>X: " + x.toFixed(2)
+//         )
+//         .openOn(map);
+// }
 
-map.on('click', onMapClick);
-
-// var marker = L.marker([51.5, -0.09]).addTo(map);
-
-// var circle = L.circle([51.508, -0.11], {
-//     color: 'red',
-//     fillColor: '#f03',
-//     fillOpacity: 0.5,
-//     radius: 500
-// }).addTo(map);
-
-// var polygon = L.polygon([
-//     [51.509, -0.08],
-//     [51.503, -0.06],
-//     [51.51, -0.047]
-// ]).addTo(map);
+// map.on('click', onMapClick);
 
 
